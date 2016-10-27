@@ -1,0 +1,462 @@
+*{
+	font-family: Arial,Tahoma,"hiragino sans gb",Helvetica;
+	margin:0;
+	padding: 0;
+}
+p,ul,li{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+audio{display: none}
+.play-mini .open_list{
+	background: blue;
+	background: url(../img/player_bg.png) no-repeat -222px -97px;
+	width: 47px;
+    height: 28px;
+    border: 0;
+    position: absolute;
+    top: 0;
+    right: 45px;
+    cursor: pointer;
+}
+.play-mini .open_list span{
+	color: #FFF;
+    font-family: tahoma;
+    font-size: 11px;
+    line-height: 28px;
+    display: inline-block;
+    text-align: center;
+    width: 24px;
+    height: 28px;
+    margin-left: 23px;
+}
+.gecigongneng{
+	display: block;
+    width: 14px;
+    height: 14px;
+    background: url(../img/player_bg.png) no-repeat -452px 0;
+    position: absolute;
+    top: 7px;
+    right: 20px;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+.play .play-mini{
+	width: 541px;
+	height: 115px;
+	
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom:0;
+	background: #000000;
+	margin: auto;
+}
+.play .play-list{
+	width: 541px;
+	height: 457px;
+	
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom:115px;
+	background: #1B1B1B;
+	margin: auto;
+}
+.play-list ul li::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+ul li{
+	margin-top: 5px;
+	width: 529px;
+	height: 24px;
+	cursor: pointer;
+	color: #595959;
+	position: relative;
+}
+ul li .music_name{
+	width: 254px;
+	height: 24px;
+	float: left;
+	line-height: 24px;
+}
+ul li .singer_name{
+	width: 180px;
+	height: 24px;
+	float: left;
+	line-height: 24px;
+}
+ul li .play_time{
+	width: 34px;
+	height: 24px;
+	float: left;
+	line-height: 24px;
+}
+ul li:hover{
+	background: #000;
+	color: #fff;
+}
+.play-list ul li.playing{
+	color: #0CC65B;
+}
+.play-list ul li .btn_list{
+	width: 130px;
+	height: 24px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: none;
+	background: #000000;
+}
+.play-list ul li .btn_list strong{
+	width: 15px;
+	height: 15px;
+	background: green;
+	float: left;
+	margin-left: 15px;
+	margin-top: 4px;
+}
+.play-list ul li .btn_list .btn_like{
+	background-image: url(../img/../img/player_bg.png);
+	background-position:-1px -127px;
+}
+.play-list ul li .btn_list .btn_like:hover{
+	background-image: url(../img/../img/player_bg.png);
+	background-position:-1px -145px;
+}
+.play-list ul li .btn_list .btn_share{
+	background-image: url(../img/../img/player_bg.png);
+	background-position:-17px -127px;
+}
+.play-list ul li .btn_list .btn_share:hover{
+	background-image: url(../img/../img/player_bg.png);
+	background-position:-17px -145px;
+}
+.play-list ul li .btn_list .btn_collect{
+	background-image: url(../img/../img/player_bg.png);
+	background-position:-65px -127px;
+}
+.play-list ul li .btn_list .btn_collect:hover{
+	background-image: url(../img/../img/player_bg.png);
+	background-position:-65px -145px;
+}
+.play-list ul li .btn_list .btn_delet{
+	background-image: url(../img/../img/player_bg.png);
+	background-position:-48px -127px;
+}
+.play-list ul li .btn_list .btn_delet:hover{
+	background-image: url(../img/../img/player_bg.png);
+	background-position:-48px -145px;
+}
+.play-list ul li:hover .btn_list{
+	display: block;
+}
+.album_picture{
+	float: left;
+	border: 1px solid #ccc;
+	width:90px;
+	height:90px;
+	margin-top:12px;
+	margin-left:12px;
+}
+.play .music_info_main{
+	color: #fff;
+}
+.music_info_main{
+	width:400px;
+	height: 109px;
+	float: left;	
+}
+.music_info_main .music_name_qumu{
+	width:auto;
+	height:20px;
+	margin-top: 10px;
+	font-size: 20px;
+	margin-left: 20px;
+}
+.music_info_main .singer_name_qumu{
+	width:100px;
+	height:20px;
+	margin-top: 10px;
+	font-size: 16px;
+	margin-left: 20px;
+}
+.music_info_main .singer_name_time{
+	margin-left: 20px;
+	width:100px;
+	margin-top: 10px;
+
+	height:auto;
+	font-size: 14px;
+}
+.music_info_main .btns{
+	width:310px;
+	height:36px;
+	margin-left: 120px;
+	margin-top: -20px;
+	/* background: blue; */
+}
+.music_info_main .btns .btn_top{
+	width: 30px;
+	height: 28px;
+    margin-left: 10px;
+	float: left;
+}
+.music_info_main .btns .volume{
+	width: 125px;
+	height: 36px;
+    margin-left: 10px;
+	float: left;
+	position:relative;
+}
+.music_info_main .btns .volume .volume_op{
+	width: 71px;
+	height: 11px;
+	position: absolute;
+	right:25px;
+	top:14px;
+	background-image: url(../img/player_bg.png);
+	background-position: -291px -11px;
+}
+.music_info_main .btns .volume .volume_op .yinliangtiao{
+	position: absolute;
+	width: 30px;
+	height: 11px;
+	background-image: url(../img/player_bg.png);
+	background-position: -291px 0;
+}
+.music_info_main .btns .volume .volume_op .yinliangtiao:hover{
+       background-position: -291px -22px;
+}
+.music_info_main .btns .volume .volume_op .indicator{
+	position: absolute;
+	top: 0;
+	left: 27px;
+	width: 6px;
+	height: 11px;
+	background-image: url(../img/player_bg.png);
+	background-position: -366px 0;
+}
+.music_info_main .btns .volume .volume_op.moving .yinliangtiao{
+	background-position: -291px -22px;
+}
+.music_info_main .btns .volume .volume_op.moving .indicator{
+	background-position: -366px -16px;
+}
+.music_info_main .btns .btn_down{
+	width: 30px;
+	height: 28px;
+    /* background:green; */
+    margin-left: 10px;
+	float: left;
+}
+.music_info_main .btns .btn_zanting{
+	width: 36px;
+	height: 36px;
+    margin-left: 10px;
+	float: left;
+}
+
+.music_info_main .btns .btn_moshi{
+	position: relative;
+	width: 36px;
+	height: 36px;
+    margin-left: 10px;
+	float: left;
+	background: url(../img/player_bg.png);
+	background-position: -410px 0;
+}
+.music_info_main .btns .btn_moshi .selectmodle{
+	height:88px;
+	width:29px;
+	background:rgb(56,56,56);
+	position: absolute;
+	bottom:7px;
+	left:0px;
+	display: none;
+}
+.selectmodle .liebiao{
+	width: 29px;
+	height: 22px;
+	background-image: url(../img/player_bg.png);
+	background-position:-410px -0;
+}
+.selectmodle .liebiao:hover{
+	width: 29px;
+	height: 22px;
+	background-image: url(../img/player_bg.png);
+	background-position:-410px -22px;
+}
+.selectmodle .suijibofang{
+	width: 29px;
+	height: 22px;
+	background-image: url(../img/player_bg.png);
+	background-position:-410px -44px;
+}
+.selectmodle .suijibofang:hover{
+	width: 29px;
+	height: 22px;
+	background-image: url(../img/player_bg.png);
+	background-position:-410px -66px;
+}
+.selectmodle .danqu{
+	width: 29px;
+	height: 22px;
+	background-image: url(../img/player_bg.png);
+	background-position:-378px 0;
+}
+.selectmodle .danqu:hover{
+	width: 29px;
+	height: 22px;
+	background-image: url(../img/player_bg.png);
+	background-position:-378px -22px;
+}
+.selectmodle .shuxubofang{
+	width: 29px;
+	height: 22px;
+	background-image: url(../img/player_bg.png);
+	background-position:-378px -44px;
+}
+.selectmodle .shuxubofang:hover{
+	width: 29px;
+	height: 22px;
+	background-image: url(../img/player_bg.png);
+	background-position:-378px -66px;
+}
+.music_info_main .btns .volume .btn_yinliang{
+	width: 36px;
+	height: 36px;
+    margin-left: -10px;
+    margin-top:-3px;	
+	float: left;
+}
+.play-mini .music_info_main .btn_zanting{
+	background-image: url(../img/player_bg.png);
+	background-position:-107px -1px;
+}
+.play-mini .music_info_main .btn_zanting:hover{
+	background-image: url(../img/player_bg.png);
+	background-position:-107px -43px;
+}
+.play-mini .music_info_main .btn_zanting.btn_bofang{
+	background-image: url(../img/player_bg.png);
+	background-position:-295px -88px;
+}
+.play-mini .music_info_main .btn_top{
+	background-image: url(../img/player_bg.png);
+	background-position:-74px 5px;
+}
+.play-mini .music_info_main .btn_top:hover{
+	background-image: url(../img/player_bg.png);
+	background-position:-74px -27px;
+}
+.play-mini .music_info_main .btn_down{
+	background-image: url(../img/player_bg.png);
+	background-position:-152px 5px;
+}
+.play-mini .music_info_main .btn_down:hover{
+	background-image: url(../img/player_bg.png);
+	background-position:-152px -27px;
+}
+
+.play-mini .music_info_main .btn_moshi{
+	background-image: url(../img/player_bg.png);
+	background-position:-222px 6px;
+}
+.play-mini .music_info_main .btn_moshi:hover{
+	background-image: url(../img/player_bg.png);
+	background-position:-222px -26px;
+}
+.play-mini .music_info_main .btn_yinliang{
+	background-image: url(../img/player_bg.png);
+	background-position:-185px 8px;
+}
+.play-mini .music_info_main .btn_yinliang:hover{
+	background-image: url(../img/player_bg.png);
+	background-position:-185px -24px;
+}
+.play-mini .music_info_main .btn_yinliang.jingyin{
+	background-image: url(../img/player_bg.png);
+	background-position:-147px -54px;
+}
+.play-mini .music_info_main .btn_yinliang.jingyin:hover{
+	background-image: url(../img/player_bg.png);
+	background-position:-184px -54px;
+}
+.jiudutiao{
+	width: 100%;
+    background: #323232;
+    font-size: 0;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+.dangqianjindu{
+	background: red;
+    font-size: 0;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+.zidian{
+	width:16px;
+	height:16px;
+	background:#E7E7E7;
+	border-radius: 50%;
+	position: absolute;
+	bottom:-4px;
+	left: -8px;
+	z-index: 90;
+}
+.liebiaoqingkong{
+	width: 100px;
+	height: 20px;
+	background: green;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 5px;
+	margin-left: 850px;
+	margin-top: 10px;
+}
+.play-mini .gequjindu .tips{
+	width: 60px;
+	height: 25px;
+	text-align: center;
+	line-height: 25px;
+	position: absolute;top:-40px;
+	left:-30px;
+	border: 1px solid #666;
+	z-index: 100;
+	display: none;
+}
+.play-mini .gequjindu .tips p{
+	width: 100%;
+	height: 100%;
+	background: #383838;
+	position: absolute;
+	left:0;
+	top:0;
+	color: #fff;
+	z-index: 20;
+    font-size: 15px;
+	line-height: 25px;
+}
+.play-mini .gequjindu .tips .trigon{
+	width: 10px;
+	height: 10px;
+	background:#383838;
+	position: absolute;
+	left: 50%;
+	margin-left: -6px;
+	bottom: -5px;transform:rotateZ(45deg);
+	border: 1px solid #666;
+}
